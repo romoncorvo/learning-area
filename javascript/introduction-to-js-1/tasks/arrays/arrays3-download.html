@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Arrays: Task 3</title>
     <style>
       p {
@@ -17,27 +17,36 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
-    let myArray = [ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ];
-
+    let myArray = [
+      "Ryu",
+      "Ken",
+      "Chun-Li",
+      "Cammy",
+      "Guile",
+      "Sakura",
+      "Sagat",
+      "Juri",
+    ];
+    let index = 0;
     // Add your code here
+    myArray.pop();
+    myArray.push("Goku", "Freeza");
+    for (const name of myArray) {
+      index = myArray.indexOf(name);
+      myArray[index] = `${name} (${index})`;
+    }
+    const myString = myArray.join("-");
 
     // Don't edit the code below here!
 
-    const section = document.querySelector('section');
+    const section = document.querySelector("section");
 
-    let para1 = document.createElement('p');
+    let para1 = document.createElement("p");
     para1.textContent = myString;
 
     section.appendChild(para1);
   </script>
-
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Object basics: Task 2</title>
     <style>
       p {
@@ -17,26 +17,42 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
     let bandInfo;
 
     // Add your code here
-
+    const deepPurple = {
+      name: "Deep Purple",
+      nationality: "England",
+      genre: "rock",
+      members: 5,
+      formed: 1924,
+      split: 1993,
+      albums: [
+        { name: "idk", released: 1964 },
+        { name: "othr", released: 1983 },
+      ],
+    };
+    bandInfo = `${deepPurple.name} is a ${deepPurple.genre} from ${
+      deepPurple.nationality
+    } with ${deepPurple.members} members. 
+    They were formed in ${deepPurple.formed} and have ${
+      deepPurple.split
+        ? `split up in ${deepPurple.split}`
+        : "have never split up"
+    }. They have two albums, ${
+      deepPurple.albums[0].name
+    } that was released in ${deepPurple.albums[0].released} and ${
+      deepPurple.albums[1].name
+    } that was released in ${deepPurple.albums[1].released}.`;
 
     // Don't edit the code below here!
 
-    const section = document.querySelector('section');
-    let para1 = document.createElement('p');
+    const section = document.querySelector("section");
+    let para1 = document.createElement("p");
     para1.textContent = bandInfo;
     section.appendChild(para1);
   </script>
-
 </html>

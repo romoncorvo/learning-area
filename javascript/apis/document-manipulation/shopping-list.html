@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping list example</title>
     <style>
       li {
@@ -10,28 +10,51 @@
       }
 
       li button {
-        font-size: 8px;
+        font-size: 12px;
         margin-left: 20px;
         color: #666;
       }
     </style>
   </head>
   <body>
-
     <h1>My shopping list</h1>
 
     <div>
       <label for="item">Enter a new item:</label>
-      <input type="text" name="item" id="item">
+      <input type="text" name="item" id="item" />
       <button>Add item</button>
     </div>
 
-    <ul>
-
-    </ul>
+    <ul></ul>
 
     <script>
+      const button = document.querySelector("button");
+      const ul = document.querySelector("ul");
+      const input = document.querySelector("input");
 
+      function whenClicked() {
+        const inputValue = input.value;
+        input.value = "";
+
+        const newLi = document.createElement("li");
+        const newSpan = document.createElement("span");
+        const newButton = document.createElement("button");
+
+        newLi.appendChild(newSpan);
+        newLi.appendChild(newButton);
+
+        newSpan.textContent = inputValue;
+        newButton.textContent = "Delete";
+
+        ul.appendChild(newLi);
+        newButton.addEventListener("click", () => {
+          ul.removeChild(newLi);
+        });
+
+        input.focus();
+      }
+
+      button.addEventListener("click", whenClicked);
     </script>
   </body>
 </html>
