@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Basic controls: Task 3</title>
     <style>
       body {
@@ -20,14 +20,19 @@
 
   <body>
     <form>
-        <ul>
-          <li>
-            <label for="gallery-img">Choose gallery images to upload</label>
-
-          </li>
-        </ul>
+      <ul>
+        <li>
+          <label for="gallery-img">Choose gallery images to upload</label>
+          <input
+            type="file"
+            name="img"
+            id="img"
+            accept="image/jpeg, image/png"
+            multiple
+          />
+        </li>
+      </ul>
       <button>Submit</button>
     </form>
   </body>
-
 </html>

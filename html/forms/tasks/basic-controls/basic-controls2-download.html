@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Basic controls: Task 2</title>
     <style>
       body {
@@ -25,15 +25,15 @@
         <ul>
           <li>
             <label for="pinkie">Pinkie Pie</label>
-
+            <input type="radio" name="pony" id="pinkie" checked />
           </li>
           <li>
             <label for="rainbow">Rainbow Dash</label>
-
+            <input type="radio" name="pony" id="rainbow" />
           </li>
           <li>
             <label for="twilight">Twilight Sparkle</label>
-
+            <input type="radio" name="pony" id="twilight" />
           </li>
         </ul>
       </fieldset>
@@ -42,16 +42,23 @@
         <ul>
           <li>
             <label for="vegan">Vegan</label>
-
+            <input type="checkbox" name="vegan" id="vegan" />
           </li>
           <li>
             <label for="onions">Onions</label>
-
+            <input type="checkbox" name="onions" id="onions" />
+          </li>
+          <li>
+            <label for="cheese">Cheese</label>
+            <input type="checkbox" name="cheese" id="cheese" />
+          </li>
+          <li>
+            <label for="ketchup">Ketchup</label>
+            <input type="checkbox" name="ketchup" id="ketchup" />
           </li>
         </ul>
       </fieldset>
       <button>Submit</button>
     </form>
   </body>
-
 </html>
