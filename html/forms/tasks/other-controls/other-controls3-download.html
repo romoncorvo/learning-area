@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Other controls: Task 3</title>
     <style>
       body {
@@ -23,17 +23,17 @@
       <ul>
         <li>
           <label for="food">Enter your favorite food:</label>
-
-
-              Salad
-              Curry
-              Pizza
-              Fajitas
-              Biscuits
-              Crisps
-              Fruit
-              Breadsticks
-
+          <input type="text" name="food" id="food" list="myFoods" />
+          <datalist id="myFoods">
+            <option>Salad</option>
+            <option>Curry</option>
+            <option>Pizza</option>
+            <option>Fajitas</option>
+            <option>Biscuits</option>
+            <option>Crisps</option>
+            <option>Fruit</option>
+            <option>Breadsticks</option>
+          </datalist>
         </li>
         <li>
           <button>Submit choice</button>
@@ -41,5 +41,4 @@
       </ul>
     </form>
   </body>
-
 </html>
